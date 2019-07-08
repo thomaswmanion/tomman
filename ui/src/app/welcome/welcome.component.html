@@ -1,0 +1,10 @@
+<div id="welcome-wrapper">
+  <div id="welcome-inner">
+    <h1 class="text-center">Welcome to Tomman!</h1>
+    <p class="text-center"><i>So, you want to build an app?</i></p>
+    <mat-form-field class="center field">
+      <input matInput placeholder="App name" #nameEl autocomplete="off" [(ngModel)]="appGenState.appGen.name"/>
+    </mat-form-field>
+    <button *ngIf="appGenState.appGen.name" mat-button color="primary" (click)="begin()">Let's begin!</button>
+  </div>
+</div>
