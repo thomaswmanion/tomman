@@ -13,7 +13,8 @@ export class AppGenState {
         } else {
             return {
                 curAppGen: {
-                    name: ''
+                    name: '',
+                    routes: []
                 }
             };
         }
@@ -33,4 +34,10 @@ export interface IAppGenStateData {
 
 export interface IAppGen {
     name: string;
+    routes: IAppGenRoute[];
+}
+
+export interface IAppGenRoute {
+    name: string;
+    path: string;
 }

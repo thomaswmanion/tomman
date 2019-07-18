@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavComponent } from './nav.component';
+import { EditRouteComponent } from './edit-route.component';
+import { EditRouteNavComponent } from './edit-route-nav/edit-route-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatMenuModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [NavComponent],
+  declarations: [EditRouteComponent, EditRouteNavComponent],
   imports: [
     CommonModule,
     LayoutModule,
@@ -17,7 +18,6 @@ import { RouterModule } from '@angular/router';
     MatListModule,
     MatMenuModule,
     RouterModule
-  ],
-  exports: [NavComponent]
+  ]
 })
-export class NavModule { }
+export class EditRouteModule { }

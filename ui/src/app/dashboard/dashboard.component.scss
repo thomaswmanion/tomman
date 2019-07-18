@@ -1,0 +1,52 @@
+#route-listing {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 200px;
+    background-color: rgb(230, 228, 228);
+    z-index: 1;
+    padding-top: 35px;
+}
+
+.route-header {
+    font-size: 12px;
+    font-weight: 400;
+    position: absolute;
+    top: 0;
+    left: 8px;
+}
+
+#add-route-container {
+    background-color: #e6e4e4;
+    width: 100%;
+    bottom: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#no-routes {
+    padding-top: 45px;
+    font-weight: 600;
+}
+
+.route {
+    position: relative;
+    padding: 15px;
+}
+
+.route-card {
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+    }
+}
+
+.edit-text {
+    position: absolute;
+    top: 43px;
+    font-size: 30px;
+    color: gray;
+    text-align: center;
+    width: 100%;
+}

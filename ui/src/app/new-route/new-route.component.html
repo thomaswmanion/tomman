@@ -1,0 +1,17 @@
+<div id="new-route">
+    <div class="container" id="new-route-inner">
+        <h1 class="full-width-padding-md new-route-title">New Route</h1>
+        <form [formGroup]="fg" class="full-width-padding-md">
+            <mat-form-field class="max-width">
+                <input matInput placeholder="Name" formControlName="name">
+            </mat-form-field>
+            <br />
+            <mat-form-field class="max-width">
+                <input matInput placeholder="Path" formControlName="path">
+            </mat-form-field>
+            <br/>
+            <button mat-button (click)="cancel()">Cancel</button>
+            <button mat-button type="submit" (click)="create()">Create</button>
+        </form>
+    </div>
+</div>

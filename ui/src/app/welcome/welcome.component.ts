@@ -8,13 +8,18 @@ import { AppGenState } from '../app-gen/app-gen.state';
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent implements OnInit {
+  display = false;
   @ViewChild('nameEl') nameEl: ElementRef;
   constructor(
     private router: Router,
     public appGenState: AppGenState
   ) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    if (this.appGenState.appGen.name) {
+      await this.router.navigate(['dashboard']);
+    }
+    this.display = true;
     setTimeout(() => {
       this.nameEl.nativeElement.focus();
     });

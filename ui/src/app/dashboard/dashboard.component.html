@@ -1,1 +1,23 @@
 <app-nav></app-nav>
+<div id="container-with-nav">
+    <div id="route-listing">
+        <h2 class="route-header">Routes</h2>
+        <section id="no-routes" *ngIf="!routes">
+            <p class="text-center">No routes defined yet.</p>
+        </section>
+        <section id="routes" *ngIf="routes">
+            <div class="route" *ngFor="let route of routes; let i = index">
+                <mat-card class="route-card" (mouseenter)="hovering[i] = true" (mouseleave)="hovering[i] = false" routerLink="/edit-route/{{i}}">
+                    <h2>{{route.name}}</h2>
+                    <h3>{{route.path}}</h3>
+                    <div>
+                        <div *ngIf="hovering[i]" class="edit-text">Edit</div>
+                    </div>
+                </mat-card>
+            </div>
+        </section>
+    </div>
+    <div id="add-route-container">
+        <button mat-button color="primary" id="add-route" routerLink="/new-route">Add Route</button>
+    </div>
+</div>
