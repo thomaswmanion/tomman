@@ -1,0 +1,11 @@
+<div *ngIf="fg" class="add-component-modal">
+  <h1>{{c.label}}</h1>
+  <form [formGroup]="fg">
+    <section *ngFor="let p of c.properties">
+      <mat-form-field class="max-width">
+        <input matInput [placeholder]="p.label" [formControlName]="p.id">
+      </mat-form-field>
+    </section>
+    <button mat-button (click)="create()">Create</button>
+  </form>
+</div>

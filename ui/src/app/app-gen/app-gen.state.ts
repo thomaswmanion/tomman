@@ -40,4 +40,14 @@ export interface IAppGen {
 export interface IAppGenRoute {
     name: string;
     path: string;
+    sections: IAppGenRouteSection[];
+}
+
+export interface IAppGenRouteSection {
+    components: IAppGenComponent[];
+}
+
+export interface IAppGenComponent {
+    id: string;
+    [property: string]: any;
 }

@@ -12,6 +12,11 @@ export const addComponentList: IAddComponent[] = [
             label: 'Route Link',
             type: 'text',
             required: true
+        }, {
+            id: 'Label',
+            label: 'Button Text',
+            type: 'text',
+            required: true
         }]
     },
 ];

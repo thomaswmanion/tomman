@@ -1,6 +1,14 @@
-<app-edit-route-nav></app-edit-route-nav>
+<app-edit-route-nav [route]="route"></app-edit-route-nav>
 <div id="container-with-nav">
     <div id="edit-route-container" *ngIf="route">
-        {{route | json}}
+        <form [formGroup]="fg" class="full-width-padding-md">
+            <mat-form-field class="max-width">
+                <input matInput placeholder="Name" formControlName="name">
+            </mat-form-field>
+            <br />
+            <mat-form-field class="max-width">
+                <input matInput placeholder="Path" formControlName="path">
+            </mat-form-field>
+        </form>
     </div>
 </div>

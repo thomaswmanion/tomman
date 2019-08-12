@@ -3,9 +3,9 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="!(isHandset$ | async)">
-    <mat-toolbar>tomman</mat-toolbar>
+    <mat-toolbar>appstart</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/dashboard">Back to Dashboard</a>
+      <a mat-list-item (click)="backToDashboard()">Back to Dashboard</a>
       <hr/>
       <a mat-list-item (click)="create(c)" *ngFor="let c of addComponentList">{{c.label}}</a>
     </mat-nav-list>
